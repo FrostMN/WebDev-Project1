@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>MineCTC Laning</title>
+        <title>MineCTC: Landing Page</title>
         <script src="js/main.js"></script>
         <link type="text/css", rel="stylesheet" href="css/reset.css">
         <link type="text/css", rel="stylesheet" href="css/main.css">
@@ -16,15 +16,24 @@
                 <div class="main-text">
                     <ul>
                         <li><a href="#" onclick="downloadModal()">Get Mod Files</a></li>
-                        <li><a href="https://map.minectc.com">View Map</a></li>
+                        <li><a href="#" onclick="mapModal()">View Map</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-    <div class="modal">
-        <div class="modal-content">
-
+        <div id="download-modal" class="download-modal" onclick="closeModal()">
+            <div class="download-modal-content">
+                <ul>
+                    <li><a href="mod-files/forge-1.7.10-10.13.4.1558-1.7.10-installer.jar">Mod Loader</a></li>
+                    <li><a href="mod-files/MinectcRelease01082017.zip">Mod Pack</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
+        <div id="map-modal" class="map-modal" onclick="closeModal()">
+            <div class="map-modal-content">
+                <iframe>
+                </iframe>
+            </div>
+        </div>
     </body>
 </html>
