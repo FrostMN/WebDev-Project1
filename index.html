@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>MineCTC: Landing Page</title>
         <script src="js/main.js"></script>
+        <script src="https://use.fontawesome.com/02bb22cba0.js"></script>
         <link type="text/css", rel="stylesheet" href="css/reset.css">
         <link type="text/css", rel="stylesheet" href="css/main.css">
     </head>
@@ -31,7 +32,11 @@
         </div>
         <div id="map-modal" class="map-modal" onclick="closeModal()">
             <div class="map-modal-content">
-                <iframe>
+                <div class="map-bar">
+                    <h3>dynmap of Minectc.com</h3>
+                    <h3 id="map-close"><a href="#" onclick="closeModal()"></a><i class="fa fa-times" aria-hidden="true"></i></h3>
+                </div>
+                <iframe id="dynmap" src="https://map.minectc.com">
                 </iframe>
             </div>
         </div>
