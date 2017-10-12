@@ -7,6 +7,7 @@
     --menu-text-color: #ffffff; /* D2FF8C */
     --link-hover: #9AFF00;
     --invis: transparent;
+    --modal-bg: rgba(0,0,0,0.5);
 }
 
 
@@ -98,7 +99,7 @@ h3 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: var(--modal-bg);
     z-index: 20;
 }
 
@@ -106,19 +107,14 @@ h3 {
     position: relative;
     margin: 8em auto;
     border: 2px solid var(--site-border);
-    background: white;
-    width: 30em;
-    height: 20em;
+    background: var(--main-bg);
+    width: 38em;
+    height: 15em;
 }
 
 #nav li {
     position: relative;
     top: -0.5em;
-    /*margin-left: 1em;*/
-    /*padding-top: .5em;*/
-    /*padding-bottom: .5em;*/
-    /*padding-left: .5em;*/
-    /*padding-right: .5em;*/
 }
 
 #nav a {
@@ -154,22 +150,20 @@ h3 {
     background-color: var(--site-bg);
 }
 
-/*#nav button:before {*/
-    /*margin-left: 3em;*/
-/*}*/
-
 #download-modal ul, li {
     display: inline-block;
 }
 
-#download-modal {
-
+.download-modal-text {
+    position: relative;
+    top: 3em;
+    left: 1em;
 }
 
 #download-close {
     position: relative;
     top: .2em;
-    right: -10.5em;
+    right: -20.6em;
     cursor: pointer;
 }
 
@@ -194,7 +188,7 @@ h3 {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: var(--modal-bg);
     z-index: 20;
 }
 
@@ -232,4 +226,70 @@ h3 {
 
 #map-close:hover {
     color: var(--text-color);
+}
+
+
+.download-div-main {
+    position: absolute;
+    right: 0%;
+    left: 220px;
+    background:#F0F0F0;
+    border: 2px solid var(--site-border);
+    /*width: 70%;*/
+    min-width: 800px;
+    /*margin-right: 40px;*/
+    text-align: left;
+    padding: 25px;
+}
+
+
+.download-div {
+    height: 75px;
+    width: 570px;
+    background-color: var(--site-bg);
+    border: 2px solid var(--site-border);
+    margin-bottom: 1em;
+}
+
+.download-div-info {
+    float: right;
+    height: 50px;
+    width: 475px;
+    margin-top: .45em;
+    padding-left: .5em;
+    padding-top: .5em;
+    margin-right: .5em;
+    border: 1px solid var(--site-border);
+}
+
+#modload-link img {
+    margin: .5em;
+}
+
+#modload-img {
+    margin: .5em;
+}
+
+#modpack-img {
+    margin: .5em;
+}
+
+#lin2 {
+    margin-top: .5em;
+}
+
+.download-div a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: var(--text-color);
+    border: 2px solid var(--site-border);
+}
+
+ul {
+    padding-left: 2em;
+}
+
+ol {
+    padding-left: 1em;
 }
