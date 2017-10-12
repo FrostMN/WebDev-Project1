@@ -1,23 +1,44 @@
 :root {
     --site-bg: cornsilk;
     --site-border: saddlebrown;
+    --main-bg: tan;
     --bar-color: greenyellow;
-
+    --text-color: black;
+    --menu-text-color: #ffffff; /* D2FF8C */
+    --link-hover: #9AFF00;
+    --invis: transparent;
 }
 
 
 body {
     background-color: var(--site-bg);
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+    font-size: 25pt;
+    color: var(--menu-text-color);
+    font-family: 'Roboto', sans-serif;
 }
 
 h2 {
     font-size: 20pt;
+    color: var(--menu-text-color);
+    font-family: 'Roboto', sans-serif;
 }
 
 h3 {
     font-size: 16pt;
-    margin: .25em;
+    color: var(--menu-text-color);
+    font-family: 'Roboto', sans-serif;
 }
+
+#nav button {
+    font-size: 16pt;
+    color: var(--menu-text-color);
+    font-family: 'Roboto', sans-serif;
+}
+
 
 .main {
     position: relative;
@@ -39,11 +60,24 @@ h3 {
     z-index: 5;
 }
 
+.main-menu {
+    position: relative;
+    top: 3.75em;
+    padding: .5em;
+    margin-left: .5em;
+    z-index: 6;
+}
+
+.main-menu a {
+    text-decoration: none;
+}
+
 .main-body {
     position: absolute;
+    top: 0;
     width: 100%;
     height: 100%;
-    background-color: tan;
+    background-color: var(--main-bg);
     z-index: 1;
 }
 
@@ -51,7 +85,7 @@ h3 {
     background-color: white;
     border: solid 2px var(--site-border);
     position: absolute;
-    top: 5em;
+    top: 5.75em;
     left: 1em;
     right: 1em;
     bottom: 1em;
@@ -69,11 +103,88 @@ h3 {
 }
 
 .download-modal-content {
+    position: relative;
     margin: 8em auto;
     border: 2px solid var(--site-border);
     background: white;
     width: 30em;
     height: 20em;
+}
+
+#nav li {
+    position: relative;
+    top: -0.5em;
+    /*margin-left: 1em;*/
+    /*padding-top: .5em;*/
+    /*padding-bottom: .5em;*/
+    /*padding-left: .5em;*/
+    /*padding-right: .5em;*/
+}
+
+#nav a {
+    display: block;
+    height: 100%;
+    color: var(--text-color);
+}
+
+#nav a:hover {
+    display: block;
+    color: var(--site-border);
+    background-color: var(--site-bg);
+}
+
+#nav li:hover {
+    background-color: var(--site-bg);
+}
+
+#nav button {
+    border: none;
+    border-bottom: 2px solid var(--site-border);
+    padding: .155em;
+    color: var(--text-color);
+    background-color: var(--main-bg);
+}
+
+#nav button:hover {
+    border: none;
+    border-bottom: 2px solid var(--site-border);
+    cursor: pointer;
+    padding: .155em;
+    color: var(--text-color);
+    background-color: var(--site-bg);
+}
+
+/*#nav button:before {*/
+    /*margin-left: 3em;*/
+/*}*/
+
+#download-modal ul, li {
+    display: inline-block;
+}
+
+#download-modal {
+
+}
+
+#download-close {
+    position: relative;
+    top: .2em;
+    right: -10.5em;
+    cursor: pointer;
+}
+
+#download-close:hover {
+    color: var(--text-color);
+}
+
+
+
+.map-modal-content h3 {
+    display: inline-block;
+}
+
+.right {
+    float: right;
 }
 
 .map-modal {
@@ -87,7 +198,7 @@ h3 {
     z-index: 20;
 }
 
-.map-bar {
+.modal-bar {
     position: absolute;
     left: 0;
     right: 0;
@@ -116,5 +227,9 @@ h3 {
     position: fixed;
     top: 1.65em;
     right: 2em;
+    cursor: pointer;
+}
 
+#map-close:hover {
+    color: var(--text-color);
 }
