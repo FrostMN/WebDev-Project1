@@ -17,6 +17,9 @@ function closeModal() {
 
 function setDownload() {
     var os = detectOS();
+
+    alert(os);
+
     var modpack = document.getElementById("modpack");
     var modload = document.getElementById("modload");
     var modload_info = document.getElementById("modload-info");
