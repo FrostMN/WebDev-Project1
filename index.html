@@ -7,6 +7,7 @@
         <script src="https://use.fontawesome.com/02bb22cba0.js"></script>
         <link type="text/css", rel="stylesheet" href="css/reset.css">
         <link type="text/css", rel="stylesheet" href="css/main.css">
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
     </head>
     <body>
@@ -16,21 +17,24 @@
             </div>
             <div class="main-menu">
                 <ul id="nav">
-                    <!--
-                    <li class="nav"><a href="#" onclick="downloadModal()">DOWNLOADS</a></li>
-                    <li class="nav"><a href="#" onclick="mapModal()">MAP</a></li>
-                    -->
-                    <li class="nav"><button type="button" onclick="downloadModal()">DOWNLOADS</button></li>
+                    <li class="nav"><button type="button" onclick="openModal('download-modal')">DOWNLOADS</button></li>
                     <li class="nav"><button type="button" onclick="mapModal()">MAP</button></li>
                 </ul>
             </div>
             <div class="main-body">
                 <div class="main-text">
+                    <h1>Welcome</h1>
+                    <p>This is the landing page for the Minecraft server at:
+                        <br>
+                        forge.minectc.com
+                        <br>
+                        The mod-loader and mod-pack can be found above.
+                    </p>
                 </div>
             </div>
         </div>
         <div id="download-modal" class="download-modal" onclick="closeModal()">
-            <div class="download-modal-content">
+            <div id="download-modal-content" class="download-modal-content">
                 <div class="modal-bar">
                     <ul>
                         <li>
@@ -42,7 +46,6 @@
                     </ul>
                 </div>
                 <div class="download-modal-text">
-
                     <div id="modload" class ="download-div">
                         <a id="modload-link" href="downloads/forge/forge-1.7.10-10.13.4.1558-1.7.10-installer.jar">
                             <div class = "download-div-info">
@@ -51,7 +54,6 @@
                             </div>
                         </a>
                     </div>
-
                     <div id="modpack" class ="download-div">
                         <a id="modpack-link" href="downloads/mods/MinectcRelease01082017.zip">
                             <img id="modpack-img" src="img/zip.png">
@@ -60,12 +62,11 @@
                             </div>
                         </a>
                     </div>
-
                 </div>
             </div>
         </div>
         <div id="map-modal" class="map-modal" onclick="closeModal()">
-            <div class="map-modal-content">
+            <div id="map-modal-content" class="map-modal-content">
                 <div class="modal-bar">
                     <h3>dynmap of Minectc.com</h3>
                     <h3 id="map-close"><a href="#" onclick="closeModal()"></a><i class="fa fa-times" aria-hidden="true"></i></h3>

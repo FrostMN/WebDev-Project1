@@ -8,6 +8,7 @@
     --link-hover: #9AFF00;
     --invis: transparent;
     --modal-bg: rgba(0,0,0,0.5);
+    --shadow: rgba(0,0,0,0.2);
 }
 
 
@@ -22,6 +23,13 @@ h1 {
     font-family: 'Roboto', sans-serif;
 }
 
+.main-text h1 {
+    font-size: 25pt;
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+
 h2 {
     font-size: 20pt;
     color: var(--menu-text-color);
@@ -32,6 +40,12 @@ h3 {
     font-size: 16pt;
     color: var(--menu-text-color);
     font-family: 'Roboto', sans-serif;
+}
+
+p {
+    color: var(--text-color);
+    margin-top: .25em;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 #nav button {
@@ -46,6 +60,7 @@ h3 {
     width: 40em;
     height: 30em;
     border: 2px solid var(--site-border);
+    box-shadow: 0px 8px 16px 0px var(--shadow);
     margin: 3em auto;
 }
 
@@ -85,6 +100,7 @@ h3 {
 .main-text {
     background-color: white;
     border: solid 2px var(--site-border);
+    padding: .5em;
     position: absolute;
     top: 5.75em;
     left: 1em;
@@ -104,6 +120,7 @@ h3 {
 }
 
 .download-modal-content {
+    display: none;
     position: relative;
     margin: 8em auto;
     border: 2px solid var(--site-border);
