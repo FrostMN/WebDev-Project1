@@ -218,14 +218,37 @@ p {
     border-bottom: 2px solid var(--site-border);
 }
 
-.map-modal-content {
+
+/*.map-modal-content {*/
+    /*position: fixed;*/
+    /*top: 2em;*/
+    /*left: 2em;*/
+    /*right: 2em;*/
+    /*bottom: 2em;*/
+    /*border: 2px solid var(--site-border);*/
+    /*background: white;*/
+    /*-webkit-transition: width 2s ease, height 2s ease;*/
+    /*-moz-transition: width 2s ease, height 2s ease;*/
+    /*-o-transition: width 2s ease, height 2s ease;*/
+    /*transition: width 2s ease, height 2s ease;*/
+/*}*/
+
+#map-modal-content {
     position: fixed;
-    top: 2em;
-    left: 2em;
-    right: 2em;
-    bottom: 2em;
+    top: 9em;
+    left: 33%;
+    height: 20em;
+    width: 33%;
     border: 2px solid var(--site-border);
     background: white;
+    -webkit-transition: .75s;
+    -moz-transition: .75s;
+    -o-transition: .75s;
+    transition: .75s;
+    /*-webkit-transition: width 2s ease, height 2s ease;*/
+    /*-moz-transition: width 2s ease, height 2s ease;*/
+    /*-o-transition: width 2s ease, height 2s ease;*/
+    /*transition: width 2s ease, height 2s ease;*/
 }
 
 #dynmap {
@@ -235,10 +258,14 @@ p {
 }
 
 #map-close {
-    position: fixed;
-    top: 1.65em;
-    right: 2em;
+    float: right;
+    margin-right: .25em;
+    margin-top: .25em;
     cursor: pointer;
+    /*position: fixed;*/
+    /*top: 1.65em;*/
+    /*right: 2em;*/
+    /*cursor: pointer;*/
 }
 
 #map-close:hover {
@@ -309,4 +336,13 @@ ul {
 
 ol {
     padding-left: 1em;
+}
+
+#map-modal-content.expand {
+    top: 2em;
+    left: 2em;
+    right: 2em;
+    bottom: 2em;
+    width: calc(100vw - 4em);
+    height: calc(100vh - 4em) ;
 }

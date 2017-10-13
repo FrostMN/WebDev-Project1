@@ -1,43 +1,39 @@
-function downloadModal() {
-    setDownload();
-    var modal = document.getElementById("download-modal");
-    var modal_win = document.getElementById("download-modal-content");
-    modal.style.display = "block";
-    fadeIn(modal_win);
-}
-
-function mapModal() {
-    var modal = document.getElementById("map-modal");
-    var modal_win = document.getElementById("map-modal-content");
-    modal.style.display = "block";
-    fadeIn(modal_win);
-}
-
+// opens the modal that contains further information
 function openModal(name) {
     setDownload();
+    var content = name + "-content";
+    //var close = name.split("-")[0] + "-close";
     var modal = document.getElementById(name);
-    var modal_win = document.getElementById(name + "-content");
+    //var modal_win = document.getElementById(content);
     modal.style.display = "block";
-    fadeIn(modal_win);
+    $(function() {
+        $("#" + content).fadeIn("slow");
+        $("#" + content).toggleClass("expand");
+    });
 }
 
-function closeModal() {
-    var map_modal = document.getElementById("map-modal");
-    var map_win = document.getElementById("map-modal-content");
-    fadeOut(map_win);
-    map_modal.style.display = "none";
-    var download_modal = document.getElementById("download-modal");
-    var download_win = document.getElementById("download-modal-content");
-    fadeOut(download_win)
-    download_modal.style.display = "none";
+// closes modals
+function closeModal(name) {
+    var content = name + "-content";
+    var modal = document.getElementById(name);
+    var window = document.getElementById(content);
+    $(function() {
+        $("#" + content).toggleClass("expand");
+    });
+    $(function() {
+        $("#" + content).fadeOut("slow", function () {
+            modal.style.display = "none";
+        });
+    });
 }
 
+// This function presents the correct download based on the os
 function setDownload() {
     var os = detectOS();
-    var modpack = document.getElementById("modpack");
-    var modload = document.getElementById("modload");
+    // var modpack = document.getElementById("modpack");
+    // var modload = document.getElementById("modload");
     var modload_info = document.getElementById("modload-info");
-    var modpack_link = document.getElementById("modpack-link");
+    // var modpack_link = document.getElementById("modpack-link");
     var modload_link = document.getElementById("modload-link");
     var img_test = document.getElementById("modload-img");
     if (os == "mac") {
@@ -77,38 +73,8 @@ function setDownload() {
     }
 }
 
+// detects os running on client
 function detectOS() {
     var os = navigator.appVersion.substr(5, 3).toLowerCase();
     return os;
 }
-
-
-// fade functions are adapted form SO
-// https://stackoverflow.com/questions/6121203/how-to-do-fade-in-and-fade-out-with-javascript-and-css
-
-function fadeOut(element) {
-    var op = 1;  // initial opacity
-    var timer = setInterval(function () {
-        if (op <= 0.1){
-            clearInterval(timer);
-            element.style.display = 'none';
-        }
-        element.style.opacity = op;
-        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-        op -= op * 0.1;
-    }, 50);
-}
-
-function fadeIn(element) {
-    var op = 0.1;  // initial opacity
-    element.style.display = 'block';
-    var timer = setInterval(function () {
-        if (op >= 1){
-            clearInterval(timer);
-        }
-        element.style.opacity = op;
-        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-        op += op * 0.1;
-    }, 10);
-}
-

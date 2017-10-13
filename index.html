@@ -5,6 +5,7 @@
         <title>MineCTC: Landing Page</title>
         <script src="js/main.js"></script>
         <script src="https://use.fontawesome.com/02bb22cba0.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link type="text/css", rel="stylesheet" href="css/reset.css">
         <link type="text/css", rel="stylesheet" href="css/main.css">
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -18,7 +19,7 @@
             <div class="main-menu">
                 <ul id="nav">
                     <li class="nav"><button type="button" onclick="openModal('download-modal')">DOWNLOADS</button></li>
-                    <li class="nav"><button type="button" onclick="mapModal()">MAP</button></li>
+                    <li class="nav"><button type="button" onclick="openModal('map-modal')">MAP</button></li>
                 </ul>
             </div>
             <div class="main-body">
@@ -33,7 +34,7 @@
                 </div>
             </div>
         </div>
-        <div id="download-modal" class="download-modal" onclick="closeModal()">
+        <div id="download-modal" class="download-modal" onclick="closeModal('download-modal')">
             <div id="download-modal-content" class="download-modal-content">
                 <div class="modal-bar">
                     <ul>
@@ -41,7 +42,7 @@
                             <h3>Downloads</h3>
                         </li>
                         <li>
-                            <h3 id="download-close" class="right"><a href="#" onclick="closeModal()"></a><i class="fa fa-times" aria-hidden="true"></i></h3>
+                            <h3 id="download-close" class="right"><a href="javascript:void(0);" onclick="closeModal('download-modal')"></a><i class="fa fa-times" aria-hidden="true"></i></h3>
                         </li>
                     </ul>
                 </div>
@@ -65,11 +66,11 @@
                 </div>
             </div>
         </div>
-        <div id="map-modal" class="map-modal" onclick="closeModal()">
+        <div id="map-modal" class="map-modal" onclick="closeModal('map-modal')">
             <div id="map-modal-content" class="map-modal-content">
                 <div class="modal-bar">
-                    <h3>dynmap of Minectc.com</h3>
-                    <h3 id="map-close"><a href="#" onclick="closeModal()"></a><i class="fa fa-times" aria-hidden="true"></i></h3>
+                    <h3>Dynmap</h3>
+                    <h3 id="map-close"><a href="javascript:void(0);" onclick="closeModal('map-modal')"></a><i class="fa fa-times" aria-hidden="true"></i></h3>
                 </div>
                 <iframe id="dynmap" src="https://map.minectc.com">
                 </iframe>
