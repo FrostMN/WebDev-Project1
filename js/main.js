@@ -18,7 +18,8 @@ function closeModal() {
 function detectOS() {
     alert("in detect os");
 
-    var os = navigator.appVersion;
+    var os = navigator.appVersion.substr(5, 3).toLocaleLowerCase();
+    alert(os);
 
 
 }
